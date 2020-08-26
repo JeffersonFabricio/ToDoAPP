@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="ToDoAPP" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="qUn-G9-CRg" id="N3j-MA-h8d"/>
+                <outlet property="fabButton" destination="r13-AO-yvh" id="mBV-FK-ck3"/>
+                <outlet property="tableView" destination="ggC-wa-YC3" id="7l8-fw-RU3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-wa-YC3">
+                    <rect key="frame" x="0.0" y="122" width="414" height="774"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-G9-CRg">
+                    <rect key="frame" x="0.0" y="122" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vdW-vI-Dge">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dSA-Kz-vt7">
+                    <rect key="frame" x="16" y="60" width="382" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginapp" translatesAutoresizingMaskIntoConstraints="NO" id="EWd-ck-35t" customClass="CircleImageView" customModule="ToDoAPP" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="EWd-ck-35t" secondAttribute="height" multiplier="1:1" id="WRv-DZ-x4h"/>
+                                <constraint firstAttribute="height" constant="46" id="zok-Ja-u3F"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPs-fg-SWT">
+                            <rect key="frame" x="135" y="0.0" width="112.5" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcY-JH-pe4">
+                            <rect key="frame" x="336" y="0.0" width="46" height="46"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="plus" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                            </state>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="YlM-ke-nBn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="HcY-JH-pe4" firstAttribute="width" secondItem="EWd-ck-35t" secondAttribute="width" id="lyT-sK-bSn"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r13-AO-yvh" customClass="CircleButton" customModule="ToDoAPP" customModuleProvider="target">
+                    <rect key="frame" x="316" y="772" width="74" height="74"/>
+                    <color key="backgroundColor" name="daily_color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="r13-AO-yvh" secondAttribute="height" multiplier="1:1" id="21w-XT-7rG"/>
+                        <constraint firstAttribute="width" constant="74" id="dH9-d5-pSq"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="plus" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="default"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="2Zd-xY-hQJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ggC-wa-YC3" firstAttribute="top" secondItem="dSA-Kz-vt7" secondAttribute="bottom" constant="16" id="0GJ-2m-Elc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ggC-wa-YC3" secondAttribute="trailing" id="72Y-AP-doP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qUn-G9-CRg" secondAttribute="trailing" id="A1W-8s-DTj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r13-AO-yvh" secondAttribute="bottom" constant="16" id="IKu-Jj-4CD"/>
+                <constraint firstItem="ggC-wa-YC3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jqd-rr-YKx"/>
+                <constraint firstAttribute="bottom" secondItem="qUn-G9-CRg" secondAttribute="bottom" id="KA6-3l-Mtx"/>
+                <constraint firstItem="dSA-Kz-vt7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="KZZ-8n-yMa"/>
+                <constraint firstItem="qUn-G9-CRg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wrk-5d-RWz"/>
+                <constraint firstItem="qUn-G9-CRg" firstAttribute="top" secondItem="dSA-Kz-vt7" secondAttribute="bottom" constant="16" id="aPR-B8-nKO"/>
+                <constraint firstItem="dSA-Kz-vt7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="fBa-wc-AMs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dSA-Kz-vt7" secondAttribute="trailing" constant="16" id="hpl-MT-DJZ"/>
+                <constraint firstAttribute="bottom" secondItem="ggC-wa-YC3" secondAttribute="bottom" id="jgZ-ph-V3x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r13-AO-yvh" secondAttribute="trailing" constant="24" id="sWw-Ef-rsN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="loginapp" width="1280" height="720"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <namedColor name="daily_color">
+            <color red="0.31372549019607843" green="0.51372549019607838" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
