@@ -33,6 +33,10 @@ extension ListCollectionViewCell {
 			todoOneLabel.text = todoModels[0].todoDescription
 			todoTwoLabel.text = todoModels[1].todoDescription
 			todoThreeLabel.text = todoModels[2].todoDescription
+		} else {
+			todoOneLabel.text = ""
+			todoTwoLabel.text = ""
+			todoThreeLabel.text = ""
 		}
         
     }
