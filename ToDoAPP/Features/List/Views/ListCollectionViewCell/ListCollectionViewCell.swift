@@ -29,9 +29,9 @@ extension ListCollectionViewCell {
         
         titleLabel.text = model.typeDescription
         
-        // todoOneLabel.text = model.todoDescription
-        // todoTwoLabel.text = model.todoDescription
-        // todoThreeLabel.text = model.todoDescription
+        todoOneLabel.text = todoModels[0].todoDescription
+        todoTwoLabel.text = todoModels[1].todoDescription
+        todoThreeLabel.text = todoModels[2].todoDescription
         
     }
 }
