@@ -28,10 +28,12 @@ extension ListCollectionViewCell {
         contentView.backgroundColor = model.typeColor
         
         titleLabel.text = model.typeDescription
-        
-        todoOneLabel.text = todoModels[0].todoDescription
-        todoTwoLabel.text = todoModels[1].todoDescription
-        todoThreeLabel.text = todoModels[2].todoDescription
+       	   
+		if !todoModels.isEmpty {
+			todoOneLabel.text = todoModels[0].todoDescription
+			todoTwoLabel.text = todoModels[1].todoDescription
+			todoThreeLabel.text = todoModels[2].todoDescription
+		}
         
     }
 }
