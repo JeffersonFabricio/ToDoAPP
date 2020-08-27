@@ -137,7 +137,7 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        // cell.configure(with: TodoDataSource.shared.todos[indexPath.)
+        cell.configure(with: TodoModel.ModelType.allTypes[indexPath.row], todoModels: TodoDataSource.shared.todos)
         return cell
     }
     

@@ -23,16 +23,16 @@ class ListCollectionViewCell: UICollectionViewCell {
 
 extension ListCollectionViewCell {
     
-    func configure(with model: TodoModel) {
+    func configure(with model: TodoModel.ModelType, todoModels: [TodoModel]) {
         
-        titleLabel.text = model.type.typeDescription
-        titleLabel.textColor = model.type.typeColor
+        contentView.backgroundColor = model.typeColor
         
-        todoOneLabel.text = model.todoDescription
-        todoTwoLabel.text = model.todoDescription
-        todoThreeLabel.text = model.todoDescription
+        titleLabel.text = model.typeDescription
+        
+        // todoOneLabel.text = model.todoDescription
+        // todoTwoLabel.text = model.todoDescription
+        // todoThreeLabel.text = model.todoDescription
         
     }
-    
 }
 
